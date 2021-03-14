@@ -1,0 +1,58 @@
+{
+  "_from": "advanced-calculator@^1.0.11",
+  "_id": "advanced-calculator@1.1.4",
+  "_inBundle": false,
+  "_integrity": "sha512-PLsCplmS1Ooe+VP/qoZIWZYo0hAAbja5OZOeKuRbBhTOdJWSCe5563x0JbqOIqmycVbSOvhhlgG3gZCNFY+E6w==",
+  "_location": "/advanced-calculator",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "advanced-calculator@^1.0.11",
+    "name": "advanced-calculator",
+    "escapedName": "advanced-calculator",
+    "rawSpec": "^1.0.11",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.11"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/advanced-calculator/-/advanced-calculator-1.1.4.tgz",
+  "_shasum": "3e418042e1c9cb6c0f7492dbb006d34668df1a80",
+  "_spec": "advanced-calculator@^1.0.11",
+  "_where": "C:\\Users\\patel\\Desktop\\The Web Developer Bootcamp\\Tester",
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/maan-patel/advanced-calculator/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "This npm acts as a scientific calculator and allows you to do many calculations without worrying about formulas.",
+  "homepage": "https://github.com/maan-patel/advanced-calculator#readme",
+  "keywords": [
+    "npm",
+    "math",
+    "calculator",
+    "scientific",
+    "calculator",
+    "calc",
+    "calculus",
+    "volume",
+    "surface",
+    "area",
+    "perimeter"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "advanced-calculator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maan-patel/advanced-calculator.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.1.4"
+}
