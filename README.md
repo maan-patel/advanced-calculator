@@ -12,15 +12,14 @@ npm install advanced-calculator
 
 
 # Table of Contents
-1. [Basic Math](#Basic-Math)
-2. [Areas](#Areas)
-3. [Volumes](#Volumes)
-4. [Exponents](#Exponents)
-5. [Radicals](#Radicals)
-6. [Graphs](#Graphs)
-7. [Trigonometry](#Trigonometry)
-8. [Other](#Other)
-
+1. [Basic Math](#basic-math)
+2. [Areas](#areas)
+3. [Volumes](#volumes)
+4. [Exponents](#exponents)
+5. [Radicals](#radicals)
+6. [Graphs](#graphs)
+7. [Trigonometry](#trigonometry)
+8. [Other](#other)
 
 
 ## Basic Math
@@ -105,6 +104,9 @@ Cone            (pi)rl + (pi)r^2     1/3(pi)r^2h
 ```
 
 ## Exponents
+
+### For passing "args" , please follow this syntax: An array with an object with "base" & "exponenet"
+### [{ base: 6, exponent: 3 }, { base: 3, exponent: 2 },...]
 ```javaScript
 let Exponents = require('advanced-calculator')
 
@@ -124,6 +126,8 @@ Exponents.x10(num, exp)
 
 ## Radicals
 
+### For passing "args" , please follow this syntax: An array with an object with "base" & "exponenet"
+### [{ base: 6, exponent: 3 }, { base: 3, exponent: 2 },...]
 ```javaScript
 let Radicals = require('advanced-calculator')
 

@@ -54,8 +54,8 @@ let exponentiation = function (a, m, n) {
 //console.log(multiplyRoot([{ base: 2, exp: 3 }, { base: 5, exp: 3 }]))
 //console.log(divideRoot([{ base: 8, exp: 4 }, { base: 3, exp: 4 }]))
 //console.log(addRoot([{  base: 5, exp: 3 }, {  base: 5, exp: 3 }]))
-console.log(exponentRoot(2, 2, 3))
-console.log(radical(5, 3, 2))
-console.log(exponentiation(4, 5, 3))
+// console.log(exponentRoot(2, 2, 3))
+// console.log(radical(5, 3, 2))
+// console.log(exponentiation(4, 5, 3))
 
 module.exports = { root, multiplyRoot, divideRoot, addRoot, subtractRoot, exponentRoot, radical, exponentiation }

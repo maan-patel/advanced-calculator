@@ -24,5 +24,5 @@ let midpoint = function (x1, y1, x2, y2) {
     return `(${(x1 + x2) / 2}, ${(y1 + y2) / 2})`
 }
 
-console.log(midpoint(2, 6, 4, -2))
+// console.log(midpoint(2, 6, 4, -2))
 
