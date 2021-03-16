@@ -105,8 +105,8 @@ Cone            (pi)rl + (pi)r^2     1/3(pi)r^2h
 
 ## Exponents
 
-### For passing "args" , please follow this syntax: An array with an object with "base" & "exponenet"
-### [{ base: 6, exponent: 3 }, { base: 3, exponent: 2 },...]
+#### For passing "args" , please follow this syntax: An array with an object with "base" & "exponent"
+#### [{ base: 6, exponent: 3 }, { base: 3, exponent: 2 },...]
 ```javaScript
 let Exponents = require('advanced-calculator')
 
@@ -126,8 +126,8 @@ Exponents.x10(num, exp)
 
 ## Radicals
 
-### For passing "args" , please follow this syntax: An array with an object with "base" & "exponenet"
-### [{ base: 6, exponent: 3 }, { base: 3, exponent: 2 },...]
+#### For passing "args" , please follow this syntax: An array with an object with "base" & "exponent"
+#### [{ base: 6, exponent: 3 }, { base: 3, exponent: 2 },...]
 ```javaScript
 let Radicals = require('advanced-calculator')
 
