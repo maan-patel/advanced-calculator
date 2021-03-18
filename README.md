@@ -1,27 +1,27 @@
-# Advanced Calculator 
+# Advanced Calculator
 
 This npm acts as a scientific calculator and allows you to do many calculations without worrying about formulas.
 
 This module is still under work. My ambition is to get all basic to intermediate mathematical formulas for Conversions, Statistics, Vectors, Probability, Complex Numbers, and much more! Please see the methods working so far below:
 
 ## Installation
+
 ```
 npm install advanced-calculator
 ```
+
 ![npm](https://img.shields.io/npm/v/advanced-calculator)
 
-
 # Table of Contents
-1. [Basic Math](#Basic-Math)
-2. [Areas](#Areas)
-3. [Volumes](#Volumes)
-4. [Exponents](#Exponents)
-5. [Radicals](#Radicals)
-6. [Graphs](#Graphs)
-7. [Trigonometry](#Trigonometry)
-8. [Other](#Other)
 
-
+1. [Basic Math](#basic-math)
+2. [Areas](#areas)
+3. [Volumes](#volumes)
+4. [Exponents](#exponents)
+5. [Radicals](#radicals)
+6. [Graphs](#graphs)
+7. [Trigonometry](#trigonometry)
+8. [Other](#other)
 
 ## Basic Math
 
@@ -36,6 +36,7 @@ basicMath.sqrt(x)
 ```
 
 ## Areas
+
 ```javaScript
 let Area = require('advanced-calculator')
 
@@ -53,13 +54,14 @@ Area.trapezoidArea(h, b1, b2, unit = "")
 ```
 
 ### 2D Geometric Shapes Formulas
+
 ```
 Name	        Perimeter       Area
- 
+
 Triangle         a + b + c      12bh
 
 Circle           2 pi r         pi r2
- 
+
 Square           4a             a2
 
 Rectangle        2(a + b)       a2
@@ -69,9 +71,8 @@ Parallelogram    2(a + b)       bh
 Trapezoid        2a + b1 + b2   1/2 (b1 + b2) X h
 ```
 
-
-
 ## Volumes
+
 ```javaScript
 let Volume = require('advanced-calculator')
 
@@ -91,12 +92,12 @@ Volume.coneVolume(r, h)
 
 ```
 Name	        Surface area	     Volume
- 
+
 Sphere          4 pi r^2             4/3 pi r^3
 
 Cube            6 a^2                a^3
 
-Rectangular 
+Rectangular
 prizm           2ab + 2bc + 2ca      abc
 
 Cylinder        2(pi)r^2 + 2(pi)rh   (pi)r^2h
@@ -105,6 +106,11 @@ Cone            (pi)rl + (pi)r^2     1/3(pi)r^2h
 ```
 
 ## Exponents
+
+### For passing "args" , please follow this syntax: An array with an object with "base" & "exponenet"
+
+### [{ base: 6, exponent: 3 }, { base: 3, exponent: 2 },...]
+
 ```javaScript
 let Exponents = require('advanced-calculator')
 
@@ -120,27 +126,28 @@ Exponents.x10(num, exp)
 
 ![exponents](https://i.imgur.com/bHf6plb.png)
 
-
-
 ## Radicals
+
+### For passing "args" , please follow this syntax: An array with an object with "base" & "exponenet"
+
+### [{ base: 6, exponent: 3 }, { base: 3, exponent: 2 },...]
 
 ```javaScript
 let Radicals = require('advanced-calculator')
 
-Radicals.root(base, exp) 
-Radicals.multiplyRoot(args) 
-Radicals.divideRoot(args) 
-Radicals.addRoot(args) 
-Radicals.subtractRoot(args) 
-Radicals.exponentRoot(x, n, p) 
-Radicals.radical(x, n, p) 
+Radicals.root(base, exp)
+Radicals.multiplyRoot(args)
+Radicals.divideRoot(args)
+Radicals.addRoot(args)
+Radicals.subtractRoot(args)
+Radicals.exponentRoot(x, n, p)
+Radicals.radical(x, n, p)
 Radicals.exponentiation(a, m, n)
 ```
 
 ### Radical Formulas
 
 ![radicals](https://i.imgur.com/zfClGgk.png)
-
 
 ## Graphs
 
@@ -154,7 +161,7 @@ Graph.discriminant(a, b, c)
 Graph.factors(num)
 Graph.quad(a, b, c)
 Graph.vertexParabolaStandardForm(a, b, c)
-Graph.vertexParabolaVertexForm(h, k) 
+Graph.vertexParabolaVertexForm(h, k)
 Graph.concavity(a)
 ```
 
@@ -162,8 +169,6 @@ Graph.concavity(a)
 
 ![graphs1](https://i.imgur.com/xa9Xmd3.png)
 ![graphs2](https://i.imgur.com/gw9QEBf.png)
-
-
 
 ## Trigonometry
 
@@ -179,23 +184,23 @@ Trigonometry.thetaSin(opp, hip)
 Trigonometry.thetaCos(adj, hip)
 Trigonometry.thetaTan(opp, adj)
 
-Trigonometry.sineRuleForThetaA(a, b, A) 
-Trigonometry.sineRuleForThetaB(a, b, B) 
+Trigonometry.sineRuleForThetaA(a, b, A)
+Trigonometry.sineRuleForThetaB(a, b, B)
 Trigonometry.sineRuleForLengthB(b, A, B)
 Trigonometry.sineRuleForLengthA(a, A, B)
-Trigonometry.cosLawForThetaA(a, b, c) 
-Trigonometry.cosLawForThetaB(a, b, c) 
-Trigonometry.cosLawForThetaC(a, b, c) 
-Trigonometry.cosLawForTheta(a, b, c) 
-Trigonometry.cosLawFora(b, c, A) 
-Trigonometry.cosLawForb(a, c, B) 
-Trigonometry.HeronA(s, a, b, c) 
-Trigonometry.HeronS(a, b, c) 
-Trigonometry.exactValues(trig, PIOver) 
+Trigonometry.cosLawForThetaA(a, b, c)
+Trigonometry.cosLawForThetaB(a, b, c)
+Trigonometry.cosLawForThetaC(a, b, c)
+Trigonometry.cosLawForTheta(a, b, c)
+Trigonometry.cosLawFora(b, c, A)
+Trigonometry.cosLawForb(a, c, B)
+Trigonometry.HeronA(s, a, b, c)
+Trigonometry.HeronS(a, b, c)
+Trigonometry.exactValues(trig, PIOver)
 Trigonometry.angleRelationships(trig, constPIOver, a)
-Trigonometry.sumFormulas(trig, a, b) 
-Trigonometry.differenceFormulas(trig, a, b) 
-Trigonometry.doubleAngle(trig, a) 
+Trigonometry.sumFormulas(trig, a, b)
+Trigonometry.differenceFormulas(trig, a, b)
+Trigonometry.doubleAngle(trig, a)
 
 ```
 
@@ -205,12 +210,11 @@ Trigonometry.doubleAngle(trig, a)
 ![trig2](https://i.imgur.com/GYuYOno.png)
 ![trig3](https://i.imgur.com/gNYzL24.png)
 
-
-
 ## Other
+
 ```javaScript
-let {speed, time, dist, oneToN,sumOfArithmetic,sumOfAnglesOfNPoly, 
-sumOfAnglesOfSPoly , diagonalSquare, diagonalCube } = 
+let {speed, time, dist, oneToN,sumOfArithmetic,sumOfAnglesOfNPoly,
+sumOfAnglesOfSPoly , diagonalSquare, diagonalCube } =
 require('advanced-calculator')
 
 speed(dist, time, unit = "")
@@ -221,102 +225,35 @@ sumOfArithmetic(n, a, z)
 sumOfAnglesOfNPoly(n)
 sumOfAnglesOfSPoly(s)
 diagonalSquare(s)
-diagonalCube(s) 
+diagonalCube(s)
 ```
 
 ### Other Formulas
+
 ```
 Speed & Distance          speed = distance / time
                           time = speed / distance
                           distance = speed X time
 
-Sum of numbers 
+Sum of numbers
 from 1 to n               n (n + 1) / 2
 
 Sum of numbers in an
 arithmetic series n       (a + z) / 2
 
-Sum of angles inside 
+Sum of angles inside
 of an n-side polygon      180 (n -2)
 
 Num of diagonals inside
 of a s-sided polygon      s (s - 3) / 2
 
-Length of diagonal 
+Length of diagonal
 of a square               s * sqrt(2)
 
-Length of a space 
+Length of a space
 diagonal of a cube        s * sqrt(3)
 ```
 
+## Bibliography
 
-
-
-
-
-
-
-
-
-
-
-### 2D Geometric Shapes
-```
-Name	        Perimeter       Area
- 
-Triangle         a + b + c      12bh
-
-Circle           2 pi r         pi r2
- 
-Square           4a             a2
-
-Rectangle        2(a + b)       a2
-
-Parallelogram    2(a + b)       bh
-
-Trapezoid        2a + b1 + b2   1/2 (b1 + b2) X h
-```
-
-
-### 3D Geometric Shapes
-```
-Name	        Surface area	     Volume
- 
-Sphere          4 pi r^2             4/3 pi r^3
-
-Cube            6 a^2                a^3
-
-Rectangular 
-prizm           2ab + 2bc + 2ca      abc
-
-Cylinder        2(pi)r^2 + 2(pi)rh   (pi)r^2h
-
-Cone            (pi)rl + (pi)r^2     1/3(pi)r^2h
-```
-
-### Other Formulas
-```
-Speed & Distance          speed = distance / time
-                          time = speed / distance
-                          distance = speed X time
-
-Sum of numbers 
-from 1 to n               n (n + 1) / 2
-
-Sum of numbers in an
-arithmetic series n       (a + z) / 2
-
-Sum of angles inside 
-of an n-side polygon      180 (n -2)
-
-Num of diagonals inside
-of a s-sided polygon      s (s - 3) / 2
-
-Length of diagonal 
-of a square               s * sqrt(2)
-
-Length of a space 
-diagonal of a cube        s * sqrt(3)
-```
-
-
+Nunes, V. (n.d.). List of Math Formulas. Retrieved March 14, 2021, from https://www.matematica.pt/en/useful/math-formulas.php Used images for formulas
