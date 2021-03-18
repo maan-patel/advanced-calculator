@@ -1,6 +1,3 @@
-console.log('Hello from the Advanced Calculator! See link below for Docs')
-console.log('https://www.npmjs.com/package/advanced-calculator');
-
 let { trianglePerimeter, traingleArea, circlePerimeter, circleArea, squarePerimeter, squareArea, rectanglePerimeter, rectangleArea, parallelogramPerimeter, parallelogramArea, trapezoidPerimeter, trapezoidArea } = require('./Areas/areas')
 let { sphereSurfaceArea, sphereVolume, cubeSurfaceArea, cubeVolume, rectangularprizmSurfaceArea, rectangularprizmVolume, cylinderSurfaceArea, cylinderVolume, coneSurfaceArea, coneVolume } = require('./Volume/volume')
 let { sqrt, speed, time, dist, oneToN, sumOfArithmetic, sumOfAnglesOfNPoly, sumOfAnglesOfSPoly, diagonalSquare, diagonalCube } = require('./Other/other')

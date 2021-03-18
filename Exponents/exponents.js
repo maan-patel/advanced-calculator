@@ -34,7 +34,3 @@ let x10 = function (num, exp) {
 
 
 module.exports = { multiplyExponents, divideExponents, negativeExponents, fractionalExponents, powerOfPower, x10 }
-// console.log(powerOfPower(5, 2, 3))
-console.log(divideExponents([{ base: 2, exponent: 7 }, { base: 4, exponent: 2 }, { base: 2, exponent: 4 }, { base: 2, exponent: 1 }]))
-console.log(divideExponents([{ base: 2, exponent: 7 }, { base: 4, exponent: 2 }, { base: 2, exponent: 4 }, { base: 2, exponent: 1 }]))
-console.log(divideExponents([{ base: 6, exponent: 5 }, { base: 2, exponent: 5 }]))

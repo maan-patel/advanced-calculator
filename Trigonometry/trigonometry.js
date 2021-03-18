@@ -85,7 +85,6 @@ let cosLawForb = function (a, c, B) {
 //     }
 // }
 
-console.log(cosLawFora(6, 8, 3))
 
 let HeronA = function (s, a, b, c) {
     const discriminant = s * (s - a) * (s - b) * (s - c)
@@ -196,6 +195,4 @@ module.exports = {
     sineRuleForLengthA, cosLawForThetaA, cosLawForThetaB, cosLawForThetaC, cosLawForTheta, cosLawFora, cosLawForb, HeronA, HeronS, exactValues,
     angleRelationships, sumFormulas, differenceFormulas, doubleAngle
 }
-// console.log(doubleAngle("tan", 32))
-// console.log(Math.cos(radsToDegs(24)) * Math.cos(radsToDegs(24)))
 
