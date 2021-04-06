@@ -65,13 +65,17 @@ let distanceBetweenPointAndPlane = function (x1, y1, z1, a, b, c, d) {
     return `Perpendicular distance is ${d / e}`
 }
 
-let x1 = 4
-let y1 = -4
-let z1 = 3
-let a = 2
-let b = -2
-let c = 5
-let d = 8
 
-
-console.log(distanceBetweenPointAndPlane(x1, y1, z1, a, b, c, d))
+module.exports = {
+    eulerPolyhedralforF,
+    eulerPolyhedralforV,
+    eulerPolyhedralforE,
+    pythagorean,
+    pythagoreanForA,
+    pythagoreanForB,
+    distanceBetweenTwoPoints,
+    midpoint,
+    equationPlane,
+    isCoplanar,
+    distanceBetweenPointAndPlane,
+}

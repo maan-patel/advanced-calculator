@@ -2,7 +2,7 @@
 
 This npm acts as a scientific calculator and allows you to do many calculations without worrying about formulas.
 
-This module is still under work. My ambition is to get all basic to intermediate mathematical formulas for Conversions, Statistics, Vectors, Probability, Complex Numbers, and much more! Please see the methods working so far below:
+This module is still under work. My ambition is to get all basic to intermediate to advanced mathematical formulas for Statistics, Vectors, Probability, Complex Numbers, and much more! Please see the methods working so far below:
 
 ## Installation
 
@@ -21,18 +21,32 @@ npm install advanced-calculator
 5. [Radicals](#radicals)
 6. [Graphs](#graphs)
 7. [Trigonometry](#trigonometry)
-8. [Other](#other)
+9. [Conversions](#conversions)
+10. [Constants](#constants)
+11. [Other](#other)
 
 ## Basic Math
 
 ```javaScript
 let basicMath = require('advanced-calculator')
 
+basicMath.evaluate('1 + sin(4/2) / 3 ^ 3 -1 * 3 + pi + max(3,2) % log(24)')
+// implemented using the Shunting-Yard Algorithm by Dijkstra
+
 basicMath.add(1,2,3,4...arg)
 basicMath.sub(1, ...arg)
 basicMath.multiply(5,6,7...arg)
 basicMath.divide(5, ...arg)
 basicMath.sqrt(x)
+```
+
+### Operators for 'evaluate'
+
+```
+sin, cos, tan, ln, log, sqrt
+'+', '-', '*', '/', '%', '^'
+max, min
+( )
 ```
 
 ## Areas
@@ -211,6 +225,77 @@ Trigonometry.doubleAngle(trig, a)
 ![trig1](https://i.imgur.com/TBOdL4u.png)
 ![trig2](https://i.imgur.com/GYuYOno.png)
 ![trig3](https://i.imgur.com/gNYzL24.png)
+
+
+## Conversions
+
+### Converts n of something to something
+
+```javaScript
+let Conversions = require('advanced-calculator')
+
+Conversions.metreToGiga(n)
+Conversions.metreToMega(n)
+Conversions.metreToKilo(n)
+Conversions.metreToHecto(n)
+Conversions.metreToCenti(n)
+Conversions.metreToMilli(n)
+Conversions.metreToMicro(n)
+Conversions.metreToNano(n)
+Conversions.kiloToMetre(n)
+Conversions.hectoToMetre(n)
+Conversions.centiToMetre(n)
+Conversions.milliToMetre(n)
+Conversions.microToMetre(n)
+Conversions.nanoToMetre(n)
+Conversions.yardsToFeet(n)
+Conversions.feetToYards(n)
+Conversions.yardsToInches(n)
+Conversions.inchesToYards(n)
+Conversions.inchesToMiles(n)
+Conversions.feetToInches(n)
+Conversions.feetToMeters(n)
+Conversions.feetToMiles(n)
+Conversions.inchesToMeters(n)
+Conversions.milesToYards(n)
+Conversions.milesToMeters(n)
+Conversions.milesToInches(n)
+Conversions.milesToFeet(n)
+Conversions.yardsToMiles(n)
+Conversions.yardsToMeters(n)
+Conversions.toFahrenheit(n)
+Conversions.toCelsius(n)
+```
+
+## Constants
+
+```javaScript
+PI: Math.PI,
+E: Math.E,
+LN10: Math.LN10,
+LN2: Math.LN2,
+LOG10E: Math.LOG10E,
+LOG2E: Math.LOG2E,
+
+FEET_TO_INCHES_FACTOR: 12,
+FEET_TO_METERS_FACTOR: 0.3048,
+FEET_TO_MILES_FACTOR: 1 / 5280,
+FEET_TO_YARDS_FACTOR: 1 / 3,
+INCHES_TO_FEET_FACTOR: 1 / 12,
+INCHES_TO_METERS_FACTOR: 0.0254,
+INCHES_TO_MILES_FACTOR: 1 / 63360,
+INCHES_TO_YARDS_FACTOR: 1 / 36,
+MILES_TO_FEET_FACTOR: 5280,
+MILES_TO_INCHES_FACTOR: 63360,
+MILES_TO_METERS_FACTOR: 1609.344,
+MILES_TO_YARDS_FACTOR: 1760,
+YARDS_TO_INCHES_FACTOR: 36,
+YARDS_TO_FEET_FACTOR: 3,
+YARDS_TO_METERS_FACTOR: 0.9144,
+YARDS_TO_MILES_FACTOR: 1 / 1760,
+CELSIUS_TO_FAHRENEIT_MUTLIPLIER_FACTOR: 9 / 5,
+CELSIUS_TO_FAHRENEIT_FACTOR: 32
+```
 
 ## Other
 

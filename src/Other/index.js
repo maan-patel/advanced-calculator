@@ -45,4 +45,23 @@ let morgage = function (months, rate, loan) {
     let payment = (monthly_rate / (1 - (1 + monthly_rate) ** (-months))) * loan
     return `Your monthly payment will be ${payment}`
 }
-module.exports = { sqrt, speed, time, dist, oneToN, sumOfArithmetic, sumOfAnglesOfNPoly, sumOfAnglesOfSPoly, diagonalSquare, diagonalCube, hcf, lcf, morgage }
+
+
+let isPrime = function (n) {
+    for (var i = 2; i < n; i++) {
+        if (n % i === 0) {
+            return false;
+        }
+    }
+    return n > 1;
+}
+
+let isEven = function (n) {
+    return n % 2 === 0;
+}
+
+let isOdd = function (n) {
+    return n % 2 !== 0;
+}
+
+module.exports = { isEven, isPrime, isOdd, sqrt, speed, time, dist, oneToN, sumOfArithmetic, sumOfAnglesOfNPoly, sumOfAnglesOfSPoly, diagonalSquare, diagonalCube, hcf, lcf, morgage }
