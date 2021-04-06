@@ -172,6 +172,8 @@ Graph.concavity(a)
 
 ## Trigonometry
 
+### Please note that all input/output is in Radians
+
 ```javaScript
 let Trigonometry = require('advanced-calculator')
 

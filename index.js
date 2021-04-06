@@ -1,6 +1,6 @@
 let { trianglePerimeter, traingleArea, circlePerimeter, circleArea, squarePerimeter, squareArea, rectanglePerimeter, rectangleArea, parallelogramPerimeter, parallelogramArea, trapezoidPerimeter, trapezoidArea } = require('./Areas/areas')
 let { sphereSurfaceArea, sphereVolume, cubeSurfaceArea, cubeVolume, rectangularprizmSurfaceArea, rectangularprizmVolume, cylinderSurfaceArea, cylinderVolume, coneSurfaceArea, coneVolume } = require('./Volume/volume')
-let { sqrt, speed, time, dist, oneToN, sumOfArithmetic, sumOfAnglesOfNPoly, sumOfAnglesOfSPoly, diagonalSquare, diagonalCube } = require('./Other/other')
+let { morgage, sqrt, speed, time, dist, oneToN, sumOfArithmetic, sumOfAnglesOfNPoly, sumOfAnglesOfSPoly, diagonalSquare, diagonalCube } = require('./Other/other')
 let { multiplyExponents, divideExponents, negativeExponents, fractionalExponents, powerOfPower, x10 } = require('./Exponents/exponents')
 let { slope, m, yInt, discriminant, factors, quad, vertexParabolaStandardForm, vertexParabolaVertexForm, concavity } = require('./Graphs/graphs')
 let { root, multiplyRoot, divideRoot, addRoot, subtractRoot, exponentRoot, radical, exponentiation } = require('./Radicals/radicals')
@@ -65,6 +65,7 @@ module.exports = {
     speed,
     time,
     dist,
+    morgage,
     oneToN,
     sumOfArithmetic,
     sumOfAnglesOfNPoly,

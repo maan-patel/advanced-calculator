@@ -40,4 +40,9 @@ let lcf = function (num1, num2) {
     }
 }
 
-module.exports = { sqrt, speed, time, dist, oneToN, sumOfArithmetic, sumOfAnglesOfNPoly, sumOfAnglesOfSPoly, diagonalSquare, diagonalCube, hcf, lcf }
+let morgage = function (months, rate, loan) {
+    let monthy_rate = rate / 100 / 12;
+    let payment = (monthly_rate / (1 - (1 + monthly_rate) ** (-months))) * loan
+    return `Your monthly payment will be ${payment}`
+}
+module.exports = { sqrt, speed, time, dist, oneToN, sumOfArithmetic, sumOfAnglesOfNPoly, sumOfAnglesOfSPoly, diagonalSquare, diagonalCube, hcf, lcf, morgage }
