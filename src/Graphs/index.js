@@ -51,7 +51,7 @@ function vertexParabolaStandardForm(a, b, c) {
     return (`${x}, ${y}`)
 }
 
-let vertexParabolaVertexForm = (h, k) => '${h}, ${k}'
+let vertexParabolaVertexForm = (h, k) => `${h}, ${k}`
 
 let concavity = (a) => a > 0 ? 'Concave Up' : 'Concave Down';
 
