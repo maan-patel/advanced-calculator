@@ -121,7 +121,7 @@ Cone            (pi)rl + (pi)r^2     1/3(pi)r^2h
 
 ## Exponents
 
-### For passing "args" , please follow this syntax: An array with an object with "base" & "exponenet"
+### For passing "args" , please follow this syntax: An array with an object with "base" & "exponent" as keys
 
 ### [{ base: 6, exponent: 3 }, { base: 3, exponent: 2 },...]
 
@@ -142,7 +142,7 @@ Exponents.x10(num, exp)
 
 ## Radicals
 
-### For passing "args" , please follow this syntax: An array with an object with "base" & "exponenet"
+### For passing "args" , please follow this syntax: An array with an object with "base" & "exponent" as keys
 
 ### [{ base: 6, exponent: 3 }, { base: 3, exponent: 2 },...]
 
