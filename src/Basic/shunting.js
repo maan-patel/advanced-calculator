@@ -275,20 +275,3 @@ function eval(tree) {
 
 module.exports = { RPN, eval, parse }
 
-// document.querySelector('#btn').addEventListener('click', (e) => {
-//     let eqn = document.querySelector('#input').value;
-//     let rpn = RPN(eqn);
-
-//     var val = 'invalid input';
-
-//     if (rpn) {
-//         let tree = parse(rpn);
-//         val = eval(tree);
-//         console.log(rpn);
-//         console.log(tree);
-//         console.log(val);
-//     }
-
-//     document.querySelector('#output').innerHTML = val
-// });
-
