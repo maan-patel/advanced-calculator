@@ -9,5 +9,6 @@ module.exports = Object.assign({},
     require('./Trigonometry'),
     require('./Volume'),
     require('./Basic'),
-    require('./Conversions')
+    require('./Conversions'),
+    require('./Logarithms'),
 )

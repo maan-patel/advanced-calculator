@@ -12,6 +12,7 @@ npm install advanced-calculator
 
 ![npm](https://img.shields.io/npm/v/advanced-calculator)
 
+### Please refer each section's detailed screenshots for it's formulas for better understanding
 
 # Table of Contents
 
@@ -22,6 +23,7 @@ npm install advanced-calculator
 5. [Radicals](#radicals)
 6. [Graphs](#graphs)
 7. [Trigonometry](#trigonometry)
+8. [Logarithms](#logarithms)
 9. [Conversions](#conversions)
 10. [Constants](#constants)
 11. [Other](#other)
@@ -226,6 +228,24 @@ Trigonometry.doubleAngle(trig, a)
 ![trig1](https://i.imgur.com/TBOdL4u.png)
 ![trig2](https://i.imgur.com/GYuYOno.png)
 ![trig3](https://i.imgur.com/gNYzL24.png)
+
+
+## Logarithms
+
+```javaScript
+let Logarithms = require('advanced-calculator')
+
+Logarithms.log(a, b)
+Logarithms.logB(a, x)
+Logarithms.logProduct(a, u, v) 
+Logarithms.logQuotient(a, u, v)
+Logarithms.logExponential(a, u, v)
+
+```
+
+### Logarithms Formulas
+
+![log](https://i.imgur.com/KgoSAVg.png)
 
 
 ## Conversions
