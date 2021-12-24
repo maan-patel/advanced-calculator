@@ -12,6 +12,7 @@ npm install advanced-calculator
 
 ![npm](https://img.shields.io/npm/v/advanced-calculator)
 
+
 # Table of Contents
 
 1. [Basic Math](#basic-math)
