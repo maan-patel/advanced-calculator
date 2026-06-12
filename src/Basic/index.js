@@ -2,16 +2,23 @@ let { RPN, eval, parse } = require('./shunting')
 
 function evaluate(val) {
     let eqn = val
-    if (eqn[0] == '+' || '-'){
-        eqn = '0'+eqn
-    }
     let rpn = RPN(eqn);
 
-    var ans = 'Invalid input';
+    let ans = 'Invalid input';
 
-    if (rpn) {
+    try {
+        if (!rpn) {
+            return ans;
+        }
+
         let tree = parse(rpn);
+        if (!tree) {
+            return ans;
+        }
+
         ans = eval(tree);
+    } catch (error) {
+        return ans;
     }
 
     return ans
