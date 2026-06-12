@@ -9,6 +9,12 @@ on:
     branches:
       - main
   workflow_dispatch:
+  release:
+    types:
+      - published
+
+permissions:
+  contents: read
 
 jobs:
   test:
@@ -41,3 +47,33 @@ jobs:
 
       - name: Verify package
         run: npm pack --dry-run
+
+  publish:
+    name: Publish to npm
+    if: github.event_name == 'workflow_dispatch' || github.event_name == 'release'
+    needs: test
+    runs-on: ubuntu-latest
+    environment: npm
+
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+
+      - name: Install
+        run: npm ci
+
+      - name: Test
+        run: npm test
+
+      - name: Publish
+        run: npm publish
