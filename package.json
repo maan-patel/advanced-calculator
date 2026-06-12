@@ -1,20 +1,39 @@
 {
   "name": "advanced-calculator",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Advanced calculator that allows you to do various mathematical calculations of concepts such as Area, Volume, Exponents, Radicals, Graphs, Trigonometry, Conversion, Constants, and more. You can also evaluate an expression that is implemented using Dijkstra's Shunting-Yard Algorithm.",
   "main": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "src",
+    "README.md",
+    "LICENSE.md"
+  ],
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "prepublishOnly": "npm test"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/maan-patel/advanced-calculator.git"
   },
   "keywords": [
-    "npm",
     "calculator",
-    "js",
-    "formulas"
+    "scientific-calculator",
+    "math",
+    "math-expression",
+    "expression-parser",
+    "formula",
+    "shunting-yard",
+    "trigonometry",
+    "geometry",
+    "unit-conversion",
+    "javascript"
   ],
   "author": "Maan Patel",
   "license": "ISC",

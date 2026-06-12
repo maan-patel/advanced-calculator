@@ -24,6 +24,9 @@ function evaluate(val) {
     return ans
 }
 
+const calculate = evaluate;
+const calc = evaluate;
+
 module.exports = {
     add: (...arg) => {
         let sum = 0;
@@ -53,6 +56,8 @@ module.exports = {
         }
         return sum;
     },
-    evaluate
+    evaluate,
+    calculate,
+    calc
 
 };
