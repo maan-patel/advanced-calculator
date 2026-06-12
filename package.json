@@ -1,6 +1,6 @@
 {
   "name": "advanced-calculator",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Advanced calculator that allows you to do various mathematical calculations of concepts such as Area, Volume, Exponents, Radicals, Graphs, Trigonometry, Conversion, Constants, and more. You can also evaluate an expression that is implemented using Dijkstra's Shunting-Yard Algorithm.",
   "main": "index.js",
   "types": "index.d.ts",

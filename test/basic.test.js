@@ -19,6 +19,9 @@ test('evaluate preserves existing operator behavior', () => {
     assert.equal(calculator.evaluate('sqrt(81)'), 9);
     assert.equal(calculator.evaluate('pi'), Math.PI);
     assert.equal(calculator.evaluate('.5 + .25'), 0.75);
+    assert.equal(calculator.evaluate('((2 + 3) * (4 - 1)) / 5'), 3);
+    assert.equal(calculator.evaluate('[2 + {3 * 4}]'), 14);
+    assert.equal(calculator.evaluate('min(max(2, 3), 4)'), 3);
 });
 
 test('calculate and calc alias evaluate', () => {
@@ -30,4 +33,5 @@ test('evaluate returns Invalid input for malformed expressions', () => {
     assert.equal(calculator.evaluate('5 *'), 'Invalid input');
     assert.equal(calculator.evaluate('(5 + 2'), 'Invalid input');
     assert.equal(calculator.evaluate('5 $ 2'), 'Invalid input');
+    assert.equal(calculator.evaluate('max(,2)'), 'Invalid input');
 });

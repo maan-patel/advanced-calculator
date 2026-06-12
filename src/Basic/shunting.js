@@ -118,10 +118,26 @@ function RPN(eqn) {
     for (var i = 0, eq_len = eqn.length; i < eq_len; i++) {
         let t = eqn[i];
 
-        if (t === ' ' || t === ',') {
-            if (t === ',') {
-                expectingOperand = true;
+        if (t === ' ') {
+            continue;
+        }
+
+        if (t === ',') {
+            let separator_stack = stack[stack.length - 1];
+
+            while (stack.length !== 0 && !left_brackets.includes(separator_stack)) {
+                queue.push(stack.pop());
+                if (stack.length === 0) {
+                    return null;
+                }
+                separator_stack = stack[stack.length - 1];
             }
+
+            if (stack.length === 0) {
+                return null;
+            }
+
+            expectingOperand = true;
             continue;
         }
 
