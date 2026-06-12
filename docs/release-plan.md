@@ -16,7 +16,7 @@ This plan keeps releases small and useful. Each week should include a real code,
 | Week | Version | Focus | Planned Work |
 | --- | --- | --- | --- |
 | 1 | 1.2.0 | Package quality | Add TypeScript declarations, better npm keywords, package `files`, publish safeguards, and `calculate`/`calc` aliases. |
-| 2 | 1.2.1 | README examples | Improve examples and fix typos while keeping the current API stable. |
+| 2 | 1.2.1 | Runnable examples | Add tested examples for expression evaluation and conversions while keeping the README unchanged. |
 | 3 | 1.2.2 | Expression tests | Add more tests for decimals, constants, invalid input, and nested expressions. |
 | 4 | 1.2.3 | Conversion tests | Add coverage for metric, imperial, and temperature conversions. |
 | 5 | 1.2.4 | Geometry tests | Add coverage for area, volume, and graph helpers. |
