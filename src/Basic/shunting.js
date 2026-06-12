@@ -32,6 +32,7 @@ let constants = {
 let constant_names = Object.keys(constants);
 
 let unary_functions = {
+    neg: genFunc((x) => -x),
     sin: genFunc((x) => Math.sin(x)),
     cos: genFunc((x) => Math.cos(x)),
     tan: genFunc((x) => Math.tan(x)),
@@ -111,17 +112,28 @@ function RPN(eqn) {
 
     let obj = '';
     let type = '';
+    let expectingOperand = true;
 
     // for each token
     for (var i = 0, eq_len = eqn.length; i < eq_len; i++) {
         let t = eqn[i];
 
         if (t === ' ' || t === ',') {
+            if (t === ',') {
+                expectingOperand = true;
+            }
             continue;
         }
 
         // determine what token is
-        if (isNumber(t)) {
+        if (expectingOperand && t === '+') {
+            continue;
+        }
+
+        if (expectingOperand && t === '-') {
+            type = TYPE_FUNC;
+            obj = 'neg';
+        } else if (isNumber(t)) {
             type = TYPE_CONST;
 
             obj = t;
@@ -168,9 +180,11 @@ function RPN(eqn) {
         switch (type) {
             case TYPE_CONST:
                 queue.push(obj);
+                expectingOperand = false;
                 break;
             case TYPE_FUNC:
                 stack.push(obj);
+                expectingOperand = true;
                 break;
             case TYPE_OP:
                 if (stack.length != 0) {
@@ -189,16 +203,25 @@ function RPN(eqn) {
                     }
                 }
                 stack.push(obj);
+                expectingOperand = true;
                 break;
             case TYPE_LPAREN:
                 stack.push('(');
+                expectingOperand = true;
                 break;
             case TYPE_RPAREN:
+                if (stack.length === 0) {
+                    return null;
+                }
                 while (last_stack !== '(') {
                     queue.push(stack.pop());
+                    if (stack.length === 0) {
+                        return null;
+                    }
                     last_stack = stack[stack.length - 1];
                 }
                 stack.pop();
+                expectingOperand = false;
                 break;
             default:
                 return null;
@@ -206,6 +229,9 @@ function RPN(eqn) {
     }
 
     while (stack.length > 0) {
+        if (left_brackets.includes(stack[stack.length - 1])) {
+            return null;
+        }
         queue.push(stack.pop());
     }
 
@@ -226,6 +252,11 @@ function parse(rpn) {
                 let a = stack.pop();
                 let b = stack.pop();
 
+                if (a === undefined || b === undefined || a === null || b === null) {
+                    stack.push(null);
+                    return;
+                }
+
                 if (typeof a === 'number') {
                     tr.right = genNode(a, false);
                 } else {
@@ -242,6 +273,11 @@ function parse(rpn) {
 
                 a = stack.pop();
 
+                if (a === undefined || a === null) {
+                    stack.push(null);
+                    return;
+                }
+
                 if (typeof a === 'number') {
                     tr.left = genNode(a, false);
                 } else {
@@ -249,14 +285,26 @@ function parse(rpn) {
                 }
             }
         }
+        if (tr === null) {
+            stack.push(null);
+            return;
+        }
         tr.name = t;
         stack.push(tr);
     });
+
+    if (stack.length !== 1) {
+        return null;
+    }
 
     return stack.pop();
 }
 
 function eval(tree) {
+    if (!tree) {
+        return undefined;
+    }
+
     if (tree.func) {
         if (tree.unary) {
             return tree.val.eval(eval(tree.left));
@@ -274,4 +322,3 @@ function eval(tree) {
 
 
 module.exports = { RPN, eval, parse }
-
