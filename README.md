@@ -2,8 +2,6 @@
 
 This npm acts as a scientific calculator and allows you to do many calculations without worrying about formulas.
 
-This module is still under work.
-
 My ambition is to get all basic to intermediate to advanced mathematical formulas for Statistics, Vectors, Probability, Complex Numbers, and much more! Please see the methods working so far below:
 
 ## Installation
