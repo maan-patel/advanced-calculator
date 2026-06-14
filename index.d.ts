@@ -62,10 +62,12 @@ declare namespace calculator {
 
   function slope(rise: number, run: number): number;
   function m(y2: number, y1: number, x2: number, x1: number): number;
+  function slopeFromPoints(y2: number, y1: number, x2: number, x1: number): number;
   function yInt(m: number, b: number): string;
   function discriminant(a: number, b: number, c: number): number;
   function factors(num: number): number[];
-  function quad(a: number, b: number, c: number): string | number[];
+  function quad(a: number, b: number, c: number): string;
+  function quadraticFormula(a: number, b: number, c: number): string;
   function vertexParabolaStandardForm(a: number, b: number, c: number): string;
   function vertexParabolaVertexForm(h: number, k: number): string;
   function concavity(a: number): string;

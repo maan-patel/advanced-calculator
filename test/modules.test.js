@@ -43,8 +43,14 @@ test('area, volume, and graph helpers stay stable', () => {
     assert.equal(calculator.coneVolume(3, 4), 12 * Math.PI);
 
     assert.equal(calculator.slope(8, 2), 4);
+    assert.equal(calculator.m(5, 1, 4, 2), 2);
+    assert.equal(calculator.slopeFromPoints(5, 1, 4, 2), 2);
     assert.equal(calculator.discriminant(1, -3, 2), 1);
+    assert.deepEqual(calculator.factors(12), [1, 2, 3, 4, 6, 12]);
+    assert.deepEqual(calculator.factors(-12), [1, 2, 3, 4, 6, 12]);
+    assert.deepEqual(calculator.factors(0), []);
     assert.equal(calculator.quad(1, -3, 2), 'x1 = 2, x2 = 1');
+    assert.equal(calculator.quadraticFormula(1, 2, 5), 'x1 = -1.00 + 2.00i, x2 = -1.00 - 2.00i');
     assert.equal(calculator.vertexParabolaStandardForm(1, -4, 3), '2, -1');
     assert.equal(calculator.vertexParabolaVertexForm(2, -1), '2, -1');
     assert.equal(calculator.concavity(-2), 'Concave Down');
