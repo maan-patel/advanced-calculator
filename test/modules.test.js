@@ -24,12 +24,17 @@ test('geometry helpers handle common coordinate operations', () => {
 });
 
 test('area, volume, and graph helpers stay stable', () => {
-    assert.equal(calculator.trianglePerimeter(3, 4, 5), '12');
-    assert.equal(calculator.circleArea(2), `${Math.PI * 4}`);
-    assert.equal(calculator.squareArea(5), '25');
-    assert.equal(calculator.rectanglePerimeter(3, 7), '20');
-    assert.equal(calculator.parallelogramArea(8, 3), '24');
+    assert.equal(calculator.trianglePerimeter(3, 4, 5), 12);
+    assert.equal(calculator.trianglePerimeter(3, 4, 5, 'cm'), '12cm');
+    assert.equal(calculator.triangleArea(10, 4), 20);
+    assert.equal(calculator.traingleArea(10, 4), 20);
+    assert.equal(calculator.circleArea(2), Math.PI * 4);
+    assert.equal(calculator.circleArea(2, 'cm^2'), `${Math.PI * 4}cm^2`);
+    assert.equal(calculator.squareArea(5), 25);
+    assert.equal(calculator.rectanglePerimeter(3, 7), 20);
+    assert.equal(calculator.parallelogramArea(8, 3), 24);
     assert.equal(calculator.trapezoidArea(4, 6, 10), 32);
+    assert.equal(calculator.trapezoidArea(4, 6, 10, 'm^2'), '32m^2');
 
     assert.ok(Math.abs(calculator.sphereVolume(3) - ((4 / 3) * Math.PI * 27)) < 1e-12);
     assert.equal(calculator.cubeSurfaceArea(2), 24);

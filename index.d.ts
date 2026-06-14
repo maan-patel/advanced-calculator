@@ -28,9 +28,10 @@ declare namespace calculator {
   function circlePerimeter(r: number, unit?: string): string | number;
   function circleArea(r: number, unit?: string): string | number;
   function trianglePerimeter(a: number, b: number, c: number, unit?: string): string | number;
+  function triangleArea(b: number, h: number, unit?: string): string | number;
   function traingleArea(b: number, h: number, unit?: string): string | number;
   function trapezoidPerimeter(a: number, b1: number, b2: number, unit?: string): string | number;
-  function trapezoidArea(h: number, b1: number, b2: number): number;
+  function trapezoidArea(h: number, b1: number, b2: number, unit?: string): string | number;
 
   function sphereSurfaceArea(r: number): number;
   function sphereVolume(r: number): number;
