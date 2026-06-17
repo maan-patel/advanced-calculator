@@ -125,7 +125,7 @@ Cone            (pi)rl + (pi)r^2     1/3(pi)r^2h
 
 ## Geometry
 
-[Geometry formula PDF](docs/geometry.pdf)
+![Geometry formula screenshot](docs/geometry.png)
 
 ```javaScript
 let calculator = require('advanced-calculator')
