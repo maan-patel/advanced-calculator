@@ -21,6 +21,18 @@ test('geometry helpers handle common coordinate operations', () => {
     assert.equal(calculator.equationPlane(1, 0, 0, 0, 1, 0, 0, 0, 1), '1x + 1y + 1z + -1= 0');
     assert.equal(calculator.isCoplanar(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.25, 0.5), true);
     assert.equal(calculator.distanceBetweenPointAndPlane(0, 0, 3, 0, 0, 1, -1), 'Perpendicular distance is 2');
+    assert.equal(calculator.sumInteriorAnglesOfRegularPolygon(6), 720);
+    assert.equal(calculator.sumInteriorAnglesOfPolygon(4), 360);
+    assert.equal(calculator.interiorAngleOfRegularPolygon(6), 120);
+    assert.equal(calculator.regularPolygonInteriorAngle(5), 108);
+    assert.equal(calculator.straightLineVectorForm(1, 2, 3, 4, 5, 6), '(x, y, z) = (1, 2, 3) + k(4, 5, 6), k in R');
+    assert.equal(calculator.straightLineCartesianForm(1, 2, 3, 4, 5, 6), '(x - 1) / 4 = (y - 2) / 5 = (z - 3) / 6');
+    assert.equal(calculator.straightLineParametricForm(1, 2, 3, 4, 5, 6), 'x = 1 + 4k, y = 2 + 5k, z = 3 + 6k, k in R');
+    assert.equal(calculator.planePointNormalForm(2, 3, 4, 5, 6, 7), '2(x - 5) + 3(y - 6) + 4(z - 7) = 0');
+    assert.equal(calculator.planeScalarForm(2, 3, 4, -5), '2x + 3y + 4z - 5 = 0');
+    assert.equal(calculator.circleEquation(2, -3, 5), '(x - 2)^2 + (y + 3)^2 = 25');
+    assert.equal(calculator.sphereEquation(1, 2, 3, 4), '(x - 1)^2 + (y - 2)^2 + (z - 3)^2 = 16');
+    assert.equal(calculator.ellipseEquation(1, -2, 3, 4), '((x - 1)^2 / 9) + ((y + 2)^2 / 16) = 1');
 });
 
 test('area, volume, and graph helpers stay stable', () => {

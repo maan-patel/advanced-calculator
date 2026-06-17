@@ -44,6 +44,30 @@ declare namespace calculator {
   function coneSurfaceArea(r: number, h: number, l: number): number;
   function coneVolume(r: number, h: number): number;
 
+  function eulerPolyhedralforF(E: number, V: number): number;
+  function eulerPolyhedralforV(E: number, F: number): number;
+  function eulerPolyhedralforE(F: number, V: number): number;
+  function pythagorean(sideA: number, sideB: number): number;
+  function pythagoreanForA(b: number, c: number): number;
+  function pythagoreanForB(a: number, c: number): number;
+  function distanceBetweenTwoPoints(x1: number, y1: number, x2: number, y2: number): number;
+  function midpoint(x1: number, y1: number, x2: number, y2: number): string;
+  function equationPlane(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, x3: number, y3: number, z3: number): string;
+  function isCoplanar(x1: number, y1: number, z1: number, x2: number, y2: number, z2: number, x3: number, y3: number, z3: number, x: number, y: number, z: number): boolean;
+  function distanceBetweenPointAndPlane(x1: number, y1: number, z1: number, a: number, b: number, c: number, d: number): string;
+  function sumInteriorAnglesOfRegularPolygon(n: number): number;
+  function sumInteriorAnglesOfPolygon(n: number): number;
+  function interiorAngleOfRegularPolygon(n: number): number;
+  function regularPolygonInteriorAngle(n: number): number;
+  function straightLineVectorForm(x0: number, y0: number, z0: number, u1: number, u2: number, u3: number): string;
+  function straightLineCartesianForm(x0: number, y0: number, z0: number, u1: number, u2: number, u3: number): string;
+  function straightLineParametricForm(x0: number, y0: number, z0: number, u1: number, u2: number, u3: number): string;
+  function planePointNormalForm(n1: number, n2: number, n3: number, x0: number, y0: number, z0: number): string;
+  function planeScalarForm(n1: number, n2: number, n3: number, d: number): string;
+  function circleEquation(x0: number, y0: number, r: number): string;
+  function sphereEquation(x0: number, y0: number, z0: number, r: number): string;
+  function ellipseEquation(h: number, k: number, a: number, b: number): string;
+
   function multiplyExponents(args: ExponentTerm[]): number;
   function divideExponents(args: ExponentTerm[]): number;
   function negativeExponents(a: number, n: number): number;
