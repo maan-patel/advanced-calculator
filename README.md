@@ -19,14 +19,15 @@ npm install advanced-calculator
 1. [Basic Math](#basic-math)
 2. [Areas](#areas)
 3. [Volumes](#volumes)
-4. [Exponents](#exponents)
-5. [Radicals](#radicals)
-6. [Graphs](#graphs)
-7. [Trigonometry](#trigonometry)
-8. [Logarithms](#logarithms)
-9. [Conversions](#conversions)
-10. [Constants](#constants)
-11. [Other](#other)
+4. [Geometry](#geometry)
+5. [Exponents](#exponents)
+6. [Radicals](#radicals)
+7. [Graphs](#graphs)
+8. [Trigonometry](#trigonometry)
+9. [Logarithms](#logarithms)
+10. [Conversions](#conversions)
+11. [Constants](#constants)
+12. [Other](#other)
 
 ## Basic Math
 
@@ -120,6 +121,57 @@ prizm           2ab + 2bc + 2ca      abc
 Cylinder        2(pi)r^2 + 2(pi)rh   (pi)r^2h
 
 Cone            (pi)rl + (pi)r^2     1/3(pi)r^2h
+```
+
+## Geometry
+
+![Geometry formula screenshot](docs/geometry.png)
+
+```javaScript
+let calculator = require('advanced-calculator')
+
+calculator.eulerPolyhedralforF(E, V)
+calculator.eulerPolyhedralforV(E, F)
+calculator.eulerPolyhedralforE(F, V)
+calculator.sumInteriorAnglesOfRegularPolygon(n)
+calculator.sumInteriorAnglesOfPolygon(n)
+calculator.interiorAngleOfRegularPolygon(n)
+calculator.regularPolygonInteriorAngle(n)
+calculator.pythagorean(sideA, sideB)
+calculator.pythagoreanForA(b, c)
+calculator.pythagoreanForB(a, c)
+calculator.distanceBetweenTwoPoints(x1, y1, x2, y2)
+calculator.midpoint(x1, y1, x2, y2)
+calculator.straightLineVectorForm(x0, y0, z0, u1, u2, u3)
+calculator.straightLineCartesianForm(x0, y0, z0, u1, u2, u3)
+calculator.straightLineParametricForm(x0, y0, z0, u1, u2, u3)
+calculator.equationPlane(x1, y1, z1, x2, y2, z2, x3, y3, z3)
+calculator.planePointNormalForm(n1, n2, n3, x0, y0, z0)
+calculator.planeScalarForm(n1, n2, n3, d)
+calculator.isCoplanar(x1, y1, z1, x2, y2, z2, x3, y3, z3, x, y, z)
+calculator.distanceBetweenPointAndPlane(x1, y1, z1, a, b, c, d)
+calculator.circleEquation(x0, y0, r)
+calculator.sphereEquation(x0, y0, z0, r)
+calculator.ellipseEquation(h, k, a, b)
+```
+
+### Geometry Formulas
+
+```
+Euler's Polyhedral Formula                 F + V = E + 2
+Sum of interior angles of a polygon        (n - 2) X 180
+Interior angle of a regular polygon        ((n - 2) X 180) / n
+Pythagorean theorem                        H^2 = C1^2 + C2^2
+Distance between two points                sqrt((x1 - x2)^2 + (y1 - y2)^2)
+Midpoint                                   ((x1 + x2) / 2, (y1 + y2) / 2)
+Line vector form                           (x, y, z) = (x0, y0, z0) + k(u1, u2, u3)
+Line cartesian form                        (x - x0) / u1 = (y - y0) / u2 = (z - z0) / u3
+Line parametric form                       x = x0 + u1k, y = y0 + u2k, z = z0 + u3k
+Plane point-normal form                    n1(x - x0) + n2(y - y0) + n3(z - z0) = 0
+Plane scalar form                          n1x + n2y + n3z + d = 0
+Circle equation                            (x - x0)^2 + (y - y0)^2 = r^2
+Sphere equation                            (x - x0)^2 + (y - y0)^2 + (z - z0)^2 = r^2
+Ellipse equation                           ((x - h) / a)^2 + ((y - k) / b)^2 = 1
 ```
 
 ## Exponents
