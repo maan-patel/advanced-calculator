@@ -11,6 +11,11 @@ declare namespace calculator {
     coefficient?: number;
   }
 
+  interface ComplexNumber {
+    real: number;
+    imaginary: number;
+  }
+
   function evaluate(expression: string): EvaluateResult;
   function calculate(expression: string): EvaluateResult;
   function calc(expression: string): EvaluateResult;
@@ -110,6 +115,59 @@ declare namespace calculator {
   function logProduct(a: number, u: number, v: number): number;
   function logQuotient(a: number, u: number, v: number): number;
   function logExponential(a: number, u: number, v: number): number;
+
+  function arithmeticCommonDifference(uNext: number, uN: number): number;
+  function arithmeticNthTerm(u1: number, n: number, r: number): number;
+  function arithmeticSeriesSum(u1: number, un: number, n: number): number;
+  function geometricCommonRatio(uNext: number, uN: number): number;
+  function geometricNthTerm(u1: number, n: number, r: number): number;
+  function geometricSeriesSum(u1: number, r: number, n: number): number;
+  function simpleInterestFutureValue(principal: number, rate: number, time: number): number;
+  function compoundInterestFutureValue(principal: number, rate: number, time: number): number;
+
+  function relativeFrequency(absoluteFrequency: number, sampleSize: number): number;
+  function sampleMean(values: number[]): number;
+  function groupedMean(values: number[], frequencies: number[]): number;
+  function meanFromRelativeFrequencies(values: number[], relativeFrequencies: number[]): number;
+  function median(values: number[]): number;
+  function sumOfDeviationsFromMean(values: number[]): number;
+  function sumSquaredDeviations(values: number[]): number;
+  function groupedSumSquaredDeviations(values: number[], frequencies: number[]): number;
+  function sampleVariance(values: number[]): number;
+  function sampleStandardDeviation(values: number[]): number;
+  function probabilityMean(values: number[], probabilities: number[]): number;
+  function probabilityStandardDeviation(values: number[], probabilities: number[]): number;
+
+  function factorial(n: number): number;
+  function complementProbability(probability: number): number;
+  function unionProbability(probabilityA: number, probabilityB: number, probabilityIntersection: number): number;
+  function conditionalProbability(probabilityIntersection: number, probabilityB: number): number;
+  function independentIntersection(probabilityA: number, probabilityB: number): number;
+  function permutations(n: number, p?: number): number;
+  function permutationsWithRepetition(n: number, p: number): number;
+  function combinations(n: number, p: number): number;
+  function binomialProbability(n: number, k: number, p: number): number;
+
+  function vectorFromPoints2D(x1: number, y1: number, x2: number, y2: number): [number, number];
+  function vectorMagnitude2D(u1: number, u2: number): number;
+  function vectorMagnitudeSquared2D(u1: number, u2: number): number;
+  function translatePoint2D(a1: number, a2: number, u1: number, u2: number): [number, number];
+  function addVectors2D(u1: number, u2: number, v1: number, v2: number): [number, number];
+  function scalarMultiplyVector2D(k: number, u1: number, u2: number): [number, number];
+  function dotProduct2D(u1: number, u2: number, v1: number, v2: number): number;
+  function angleBetweenVectors2D(u1: number, u2: number, v1: number, v2: number): number;
+
+  function complex(real: number, imaginary: number): ComplexNumber;
+  function complexConjugate(real: number, imaginary: number): ComplexNumber;
+  function complexNegative(real: number, imaginary: number): ComplexNumber;
+  function addComplex(aReal: number, aImaginary: number, bReal: number, bImaginary: number): ComplexNumber;
+  function subtractComplex(aReal: number, aImaginary: number, bReal: number, bImaginary: number): ComplexNumber;
+  function multiplyComplex(aReal: number, aImaginary: number, bReal: number, bImaginary: number): ComplexNumber;
+  function divideComplex(aReal: number, aImaginary: number, bReal: number, bImaginary: number): ComplexNumber;
+  function complexInverse(real: number, imaginary: number): ComplexNumber;
+  function complexModulus(real: number, imaginary: number): number;
+  function complexArgument(real: number, imaginary: number): number;
+  function complexFromPolar(modulus: number, theta: number): ComplexNumber;
 
   function metreToGiga(n: number): number;
   function metreToMega(n: number): number;

@@ -25,9 +25,14 @@ npm install advanced-calculator
 7. [Graphs](#graphs)
 8. [Trigonometry](#trigonometry)
 9. [Logarithms](#logarithms)
-10. [Conversions](#conversions)
-11. [Constants](#constants)
-12. [Other](#other)
+10. [Sequences](#sequences)
+11. [Statistics](#statistics)
+12. [Probability](#probability)
+13. [Vectors](#vectors)
+14. [Complex Numbers](#complex-numbers)
+15. [Conversions](#conversions)
+16. [Constants](#constants)
+17. [Other](#other)
 
 ## Basic Math
 
@@ -298,6 +303,102 @@ Logarithms.logExponential(a, u, v)
 ### Logarithms Formulas
 
 ![log](https://i.imgur.com/KgoSAVg.png)
+
+## Sequences
+
+```javaScript
+let calculator = require('advanced-calculator')
+
+calculator.arithmeticCommonDifference(uNext, uN)
+calculator.arithmeticNthTerm(u1, n, r)
+calculator.arithmeticSeriesSum(u1, un, n)
+calculator.geometricCommonRatio(uNext, uN)
+calculator.geometricNthTerm(u1, n, r)
+calculator.geometricSeriesSum(u1, r, n)
+calculator.simpleInterestFutureValue(principal, rate, time)
+calculator.compoundInterestFutureValue(principal, rate, time)
+```
+
+### Sequence Formulas
+
+```
+Arithmetic common difference        r = u(n+1) - u(n)
+Arithmetic nth term                 u(n) = u1 + (n - 1)r
+Arithmetic series sum               S(n) = ((u1 + un) / 2) X n
+Geometric common ratio              r = u(n+1) / u(n)
+Geometric nth term                  u(n) = u1 X r^(n - 1)
+Geometric series sum                S(n) = u1 X (1 - r^n) / (1 - r)
+Simple interest future value        FV = P X (1 + r X t)
+Compound interest future value      FV = P X (1 + r)^t
+```
+
+## Statistics
+
+```javaScript
+let calculator = require('advanced-calculator')
+
+calculator.relativeFrequency(absoluteFrequency, sampleSize)
+calculator.sampleMean(values)
+calculator.groupedMean(values, frequencies)
+calculator.meanFromRelativeFrequencies(values, relativeFrequencies)
+calculator.median(values)
+calculator.sumOfDeviationsFromMean(values)
+calculator.sumSquaredDeviations(values)
+calculator.groupedSumSquaredDeviations(values, frequencies)
+calculator.sampleVariance(values)
+calculator.sampleStandardDeviation(values)
+calculator.probabilityMean(values, probabilities)
+calculator.probabilityStandardDeviation(values, probabilities)
+```
+
+## Probability
+
+```javaScript
+let calculator = require('advanced-calculator')
+
+calculator.factorial(n)
+calculator.complementProbability(probability)
+calculator.unionProbability(probabilityA, probabilityB, probabilityIntersection)
+calculator.conditionalProbability(probabilityIntersection, probabilityB)
+calculator.independentIntersection(probabilityA, probabilityB)
+calculator.permutations(n, p)
+calculator.permutationsWithRepetition(n, p)
+calculator.combinations(n, p)
+calculator.binomialProbability(n, k, p)
+```
+
+## Vectors
+
+```javaScript
+let calculator = require('advanced-calculator')
+
+calculator.vectorFromPoints2D(x1, y1, x2, y2)
+calculator.vectorMagnitude2D(u1, u2)
+calculator.vectorMagnitudeSquared2D(u1, u2)
+calculator.translatePoint2D(a1, a2, u1, u2)
+calculator.addVectors2D(u1, u2, v1, v2)
+calculator.scalarMultiplyVector2D(k, u1, u2)
+calculator.dotProduct2D(u1, u2, v1, v2)
+calculator.angleBetweenVectors2D(u1, u2, v1, v2)
+```
+
+## Complex Numbers
+
+```javaScript
+let calculator = require('advanced-calculator')
+
+calculator.complex(real, imaginary)
+calculator.complexConjugate(real, imaginary)
+calculator.complexNegative(real, imaginary)
+calculator.addComplex(aReal, aImaginary, bReal, bImaginary)
+calculator.subtractComplex(aReal, aImaginary, bReal, bImaginary)
+calculator.multiplyComplex(aReal, aImaginary, bReal, bImaginary)
+calculator.divideComplex(aReal, aImaginary, bReal, bImaginary)
+calculator.complexInverse(real, imaginary)
+calculator.complexModulus(real, imaginary)
+calculator.complexArgument(real, imaginary)
+calculator.complexFromPolar(modulus, theta)
+```
 
 
 ## Conversions

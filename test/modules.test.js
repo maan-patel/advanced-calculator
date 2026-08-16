@@ -67,3 +67,66 @@ test('area, volume, and graph helpers stay stable', () => {
     assert.equal(calculator.vertexParabolaVertexForm(2, -1), '2, -1');
     assert.equal(calculator.concavity(-2), 'Concave Down');
 });
+
+test('sequence helpers cover arithmetic, geometric, and interest formulas', () => {
+    assert.equal(calculator.arithmeticCommonDifference(11, 8), 3);
+    assert.equal(calculator.arithmeticNthTerm(5, 4, 3), 14);
+    assert.equal(calculator.arithmeticSeriesSum(2, 10, 5), 30);
+    assert.equal(calculator.geometricCommonRatio(18, 6), 3);
+    assert.equal(calculator.geometricNthTerm(2, 5, 3), 162);
+    assert.equal(calculator.geometricSeriesSum(2, 3, 4), 80);
+    assert.equal(calculator.geometricSeriesSum(7, 1, 4), 28);
+    assert.equal(calculator.simpleInterestFutureValue(1000, 0.05, 2), 1100);
+    assert.equal(calculator.compoundInterestFutureValue(1000, 0.05, 2), 1102.5);
+});
+
+test('statistics and probability helpers cover missing formulas', () => {
+    assert.equal(calculator.relativeFrequency(12, 48), 0.25);
+    assert.equal(calculator.sampleMean([2, 4, 6, 8]), 5);
+    assert.equal(calculator.groupedMean([10, 20, 30], [1, 2, 1]), 20);
+    assert.equal(calculator.meanFromRelativeFrequencies([10, 20, 30], [0.25, 0.5, 0.25]), 20);
+    assert.equal(calculator.median([9, 1, 5]), 5);
+    assert.equal(calculator.median([9, 1, 5, 7]), 6);
+    assert.ok(Math.abs(calculator.sumOfDeviationsFromMean([2, 4, 6]) - 0) < 1e-12);
+    assert.equal(calculator.sumSquaredDeviations([2, 4, 6]), 8);
+    assert.equal(calculator.groupedSumSquaredDeviations([10, 20, 30], [1, 2, 1]), 200);
+    assert.equal(calculator.sampleVariance([2, 4, 6]), 4);
+    assert.equal(calculator.sampleStandardDeviation([2, 4, 6]), 2);
+    assert.equal(calculator.probabilityMean([0, 1], [0.25, 0.75]), 0.75);
+    assert.ok(Math.abs(calculator.probabilityStandardDeviation([0, 1], [0.25, 0.75]) - Math.sqrt(0.1875)) < 1e-12);
+
+    assert.equal(calculator.factorial(5), 120);
+    assert.equal(calculator.complementProbability(0.4), 0.6);
+    assert.equal(calculator.unionProbability(0.5, 0.4, 0.2), 0.7);
+    assert.equal(calculator.conditionalProbability(0.2, 0.5), 0.4);
+    assert.equal(calculator.independentIntersection(0.5, 0.4), 0.2);
+    assert.equal(calculator.permutations(6, 2), 30);
+    assert.equal(calculator.permutations(4), 24);
+    assert.equal(calculator.permutationsWithRepetition(5, 3), 125);
+    assert.equal(calculator.combinations(5, 4), 5);
+    assert.ok(Math.abs(calculator.binomialProbability(10, 3, 0.6) - 0.042467328000000006) < 1e-12);
+});
+
+test('vector and complex number helpers cover missing formulas', () => {
+    assert.deepEqual(calculator.vectorFromPoints2D(3, 2, 4, 5), [1, 3]);
+    assert.equal(calculator.vectorMagnitude2D(3, 4), 5);
+    assert.equal(calculator.vectorMagnitudeSquared2D(3, 4), 25);
+    assert.deepEqual(calculator.translatePoint2D(4, 5, 3, 2), [7, 7]);
+    assert.deepEqual(calculator.addVectors2D(6, 3, 2, 1), [8, 4]);
+    assert.deepEqual(calculator.scalarMultiplyVector2D(2, 3, 4), [6, 8]);
+    assert.equal(calculator.dotProduct2D(2, 1, 0, 3), 3);
+    assert.equal(calculator.angleBetweenVectors2D(1, 0, 0, 1), Math.PI / 2);
+
+    assert.deepEqual(calculator.complex(2, 3), { real: 2, imaginary: 3 });
+    assert.deepEqual(calculator.complexConjugate(2, 3), { real: 2, imaginary: -3 });
+    assert.deepEqual(calculator.complexNegative(2, 3), { real: -2, imaginary: -3 });
+    assert.deepEqual(calculator.addComplex(2, 3, 4, 5), { real: 6, imaginary: 8 });
+    assert.deepEqual(calculator.subtractComplex(2, 3, 4, 5), { real: -2, imaginary: -2 });
+    assert.deepEqual(calculator.multiplyComplex(2, 3, 4, 5), { real: -7, imaginary: 22 });
+    assert.deepEqual(calculator.divideComplex(2, 3, 4, 5), { real: 23 / 41, imaginary: 2 / 41 });
+    assert.deepEqual(calculator.complexInverse(2, 3), { real: 2 / 13, imaginary: -3 / 13 });
+    assert.equal(calculator.complexModulus(3, 4), 5);
+    assert.equal(calculator.complexArgument(0, 1), Math.PI / 2);
+    assert.ok(Math.abs(calculator.complexFromPolar(2, Math.PI / 3).real - 1) < 1e-12);
+    assert.ok(Math.abs(calculator.complexFromPolar(2, Math.PI / 3).imaginary - Math.sqrt(3)) < 1e-12);
+});
