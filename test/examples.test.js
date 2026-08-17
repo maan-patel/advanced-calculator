@@ -8,7 +8,7 @@ function runExample(name) {
         encoding: 'utf8'
     });
 
-    return output.trim().split(/\r?\n/);
+    return output.trim().replace(/\x1B\[[0-?]*[ -/]*[@-~]/g, '').split(/\r?\n/);
 }
 
 test('basic example runs with expected output', () => {
